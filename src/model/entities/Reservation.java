@@ -42,7 +42,7 @@ public class Reservation {
         this.checkOut = checkOut;
     }
 
-    @Override
+
     public String ToString () {
         return "Room: " + roomNumber + ", check-in: " + sdf.format(checkIn) + ", check-out: " + sdf.format(checkOut)
                 + ", " + duration() + "nights";
