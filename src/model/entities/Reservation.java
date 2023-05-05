@@ -33,7 +33,7 @@ public class Reservation {
         return checkIn;
     }
     public long  duration (){
-     long diff = checkOut.getTime() - checkIn.getTime();
+     long diff =  checkIn.getTime() - checkOut.getTime();
         return TimeUnit.DAYS.convert(diff,TimeUnit.MILLISECONDS);
     }
 
@@ -42,8 +42,8 @@ public class Reservation {
         this.checkOut = checkOut;
     }
 
-
-    public String ToString () {
+    @Override
+    public String toString () {
         return "Room: " + roomNumber + ", check-in: " + sdf.format(checkIn) + ", check-out: " + sdf.format(checkOut)
                 + ", " + duration() + "nights";
     }
